@@ -46,9 +46,7 @@
         </div>
     </div>
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
-        <!-- Text Logo - Use this if you don't have a graphic logo -->
          <a class="navbar-brand logo-text page-scroll" href="index.html">Havlicek</a> 
-        <!-- Image Logo -->
         
 
         <!-- Mobile Menu Toggle Button -->
@@ -73,22 +71,17 @@
                     <a class="nav-link page-scroll" href="#opinions">OPINIONES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#callme">CONTACTO</a>
+                    <a class="nav-link page-scroll" href="#callme">REGISTRARME</a>
                 </li>
-
-                <!-- Dropdown Menu -->
                 <li class="nav-item">
-                    <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">SOBRE NOSOTROS</a>
-                   
+                    <a class="nav-link page-scroll" href="#about">SOBRE NOSOTROS</a>
                 </li>
-                <!-- end of dropdown menu -->
-
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="#contact">MANDAR OPINIONES</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" onclick="RedirectionLogin()" href="#">ENTRAR</a>
+                    <a class="nav-link page-scroll" onclick="RedirectionLogin()" href="#">INGRESAR</a>
                 </li>
             </ul>
             <span class="nav-item social-icons">
@@ -107,8 +100,8 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-container">
-                            <h1><span id="js-rotating">UN PROYECTO, UNA CERVEZA, UNA FAMILIA</span></h1>
-                            <p class="p-heading p-large">Nuestra cerveza está siendo creada día a día con la mas grande dedicación y amor para que llegue a tu mesa y de lo mejor de sí.</p>
+                            <h1><span id="js-rotating" class="titulosgrandes">UN PROYECTO, UNA CERVEZA, UNA FAMILIA</span></h1>
+                            <p class="p-heading p-large titulosgrandes">Nuestra cerveza está siendo creada día a día con la mas grande dedicación y amor para que llegue a tu mesa y de lo mejor de sí.</p>
                             <a class="btn-solid-lg page-scroll" href="#intro">SABER MÁS</a>
                         </div>
                     </div>
@@ -276,11 +269,11 @@
 
 
     @*accelerate*@
-<div>
+<!--<div>-->
 
     @*@Html.PartialAsync("~/PartialViews/_Accelerate.cshtml")*@
-    <partial name="./PartialViews/_Accelerate.cshtml" />
-</div>
+    <!--<partial name="./PartialViews/_Accelerate.cshtml" />
+</div>-->
 
 
 
@@ -493,10 +486,9 @@
                             </li>
                         </ul>
                     </div>
-                </div> <!-- end of col -->
+                </div> 
                 <div class="col-lg-6">
 
-                    <!-- Call Me Form -->
                     <form id="callMeForm" data-toggle="validator" data-focus="false">
                         <div class="form-group">
                             <input type="text" class="form-control-input" id="lname" name="lname" required>
@@ -513,10 +505,6 @@
                             <label class="label-control" for="lemail">Email</label>
                             <div class="help-block with-errors"></div>
                         </div>
-                        <div class="form-group checkbox white">
-                            <input type="checkbox" id="lterms" value="Agreed-to-Terms" name="lterms" required /> Estoy de acuerdo con las <a class="white" href="privacy-policy.html">políticas de privacidad</a> y los <a class="white" href="terms-conditions.html">términos y condiciones</a>
-                            <div class="help-block with-errors"></div>
-                        </div>
                         <div class="form-group">
                             <button type="submit" class="form-control-submit-button">REGISTRARME</button>
                         </div>
@@ -528,7 +516,7 @@
             </div>
         </div>
     </div>
-    <div id="project-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
+    <!--<div id="project-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
@@ -553,8 +541,8 @@
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
                 <img class="img-fluid" src="images/project-2.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
+            </div>--> <!-- end of col -->
+            <!--<div class="col-lg-4">
                 <h3>Classic Industry</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
@@ -565,18 +553,16 @@
                     <p class="testimonial-author">General Manager</p>
                 </div>
                 <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-    <!-- Lightbox -->
+            </div>--> <!-- end of col -->
+        <!--</div>--> <!-- end of row -->
+    <!--</div>
     <div id="project-3" class="lightbox-basic zoom-anim-dialog mfp-hide">
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
                 <img class="img-fluid" src="images/project-3.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
+            </div>--> <!-- end of col -->
+            <!--<div class="col-lg-4">
                 <h3>BoomBap Audio</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
@@ -587,18 +573,16 @@
                     <p class="testimonial-author">General Manager</p>
                 </div>
                 <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-    <!-- Lightbox -->
+            </div>--> <!-- end of col -->
+        <!--</div>--> <!-- end of row -->
+    <!--</div> 
     <div id="project-4" class="lightbox-basic zoom-anim-dialog mfp-hide">
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
                 <img class="img-fluid" src="images/project-4.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
+            </div>--> <!-- end of col -->
+            <!--<div class="col-lg-4">
                 <h3>Van Moose</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
@@ -609,18 +593,16 @@
                     <p class="testimonial-author">General Manager</p>
                 </div>
                 <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
-            </div> <!-- end of col -->
-        </div> <!-- end of row -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of lightbox -->
-    <!-- Lightbox -->
+            </div>--> <!-- end of col -->
+        <!--</div>--> <!-- end of row -->
+    <!--</div> 
     <div id="project-5" class="lightbox-basic zoom-anim-dialog mfp-hide">
         <div class="row">
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
                 <img class="img-fluid" src="images/project-5.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
+            </div>--> <!-- end of col -->
+            <!--<div class="col-lg-4">
                 <h3>Joy Moments</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
@@ -639,8 +621,8 @@
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
                 <img class="img-fluid" src="images/project-6.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
+            </div>--> <!-- end of col -->
+            <!--<div class="col-lg-4">
                 <h3>Spark Events</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
@@ -659,8 +641,8 @@
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
                 <img class="img-fluid" src="images/project-7.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
+            </div>--> <!-- end of col -->
+            <!--<div class="col-lg-4">
                 <h3>Casual Wear</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
@@ -679,8 +661,8 @@
             <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
             <div class="col-lg-8">
                 <img class="img-fluid" src="images/project-8.jpg" alt="alternative">
-            </div> <!-- end of col -->
-            <div class="col-lg-4">
+            </div>--> <!-- end of col -->
+            <!--<div class="col-lg-4">
                 <h3>Zazoo Apps</h3>
                 <hr class="line-heading">
                 <h6>Strategy Development</h6>
@@ -693,7 +675,7 @@
                 <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button" href="#projects">BACK</a>
             </div>
         </div>
-    </div>
+    </div>-->o
     <div id="about" class="counter">
         <div class="container">
             <div class="row">
@@ -743,22 +725,21 @@
                 <div class="col-lg-6">
                     <div class="text-container">
                         <div class="section-title">CONTACTO</div>
-                        <h2>Acérquese a nosotros ante cualquier duda.</h2>
-                        <p>Siempre es bienvenido</p>
+                        <h2>Su opinion nos importa.</h2>
+                        <p>Las opiniones de nuestros clientes nos empujan a notar nuestros puntos débiles y poder ir mejorandolos día a día.</p>
                         <ul class="list-unstyled li-space-lg">
                             <li class="address"><i class="fas fa-map-marker-alt"></i>Capilla del Monte, Cordoba</li>
                             <li><i class="fas fa-phone"></i><a href="tel:003024630820"> Celular - 03548 617721</a></li>
                             <li><i class="fas fa-phone"></i><a href="tel:003024630820">Teléfono Fijo - 471 3845</a></li>
                             <li><i class="fas fa-envelope"></i><a href="mailto:nadiahavlicek@gmail.com">CerveceriaHavlicek@hotmail.com</a></li>
+                            <li><i class="fas fa-facebook-f"></i><a href="https://www.facebook.com/Cerveza-artesanal-Havlicek-259783027723879/?ref=page_internal"> Facebook - Cerveceria Havlicek</a></li>
                         </ul>
-                        <h3>Seguinos </h3>
-
-                        <span class="fa-stack">
-                            <a href="#your-link">
+                       
+                            @*<a href="#https://www.facebook.com/Cerveza-artesanal-Havlicek-259783027723879/?ref=page_internal">
                                 <span class="hexagon"></span>
                                 <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
+                            </a>*@
+                     
                     </div> 
                 </div> 
                 <div class="col-lg-6">
@@ -776,15 +757,11 @@
                         </div>
                         <div class="form-group">
                             <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                            <label class="label-control" for="cmessage">Tu Mensaje</label>
-                            <div class="help-block with-errors"></div>
-                        </div>
-                        <div class="form-group checkbox">
-                            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>Estoy de acuerdo con las <a href="privacy-policy.html">politicas de privacidad</a> y los <a href="terms-conditions.html">términos y condiciones</a>
+                            <label class="label-control" for="cmessage">Tu opinión</label>
                             <div class="help-block with-errors"></div>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
+                            <button type="submit" class="form-control-submit-button">ENVIAR</button>
                         </div>
                         <div class="form-message">
                             <div id="cmsgSubmit" class="h3 text-center hidden"></div>
