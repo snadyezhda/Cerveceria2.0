@@ -603,7 +603,7 @@ input[type='checkbox'] {
     right: 0;
     bottom: 0;
     left: 0;
-    background: #113448;
+    background: #ab8118;
 }
 
 .spinner {
@@ -998,7 +998,7 @@ input[type='checkbox'] {
 /*************************/
 .accordion .area-1 {
     height: 27rem;
-    background: url('../images/details-1-background.jpg') center center no-repeat;
+    background: url('https://scontent.faep1-1.fna.fbcdn.net/v/t1.0-9/13895180_277527185949463_6435102048421431563_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=9267fe&_nc_ohc=6CovV_Xgka0AX-8L0t7&_nc_ht=scontent.faep1-1.fna&oh=7dbc861629d997670ccade2b6cc452f9&oe=608268F6') center center no-repeat;
     background-size: cover;
 }
 
@@ -1185,12 +1185,10 @@ input[type='checkbox'] {
 .tabs #tab-3 .list-unstyled {
     margin-bottom: 1.75rem;
 }
-
+/*
 .tabs .area-2 {
     height: 27rem;
-    background: url('../images/details-2-background.jpg') center center no-repeat;
-    background-size: cover;
-}
+}*/
 
 
 /****************************/
@@ -2189,10 +2187,12 @@ a:hover.back-to-top {
             vertical-align: top;
         }
 
-        .tabs .area-2 {
-            width: 50%;
+        .tabs .area-2 { 
+            width: 30%;
             height: 100%;
             display: inline-block;
+            background: url('https://scontent.faep1-1.fna.fbcdn.net/v/t1.0-9/13895180_277527185949463_6435102048421431563_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=9267fe&_nc_ohc=6CovV_Xgka0AX-8L0t7&_nc_ht=scontent.faep1-1.fna&oh=7dbc861629d997670ccade2b6cc452f9&oe=608268F6') center center no-repeat;
+            background-size: cover;
         }
 
         .tabs .tabs-container {
