@@ -1,0 +1,103 @@
+﻿@model IEnumerable<Cerveceria2._0.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Crear Nuevo</a>
+</p>
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="col-3">
+
+            <img src="@("~/uploads/img/product/" + item.ImageName)" asp-append-version="true" class="w-auto h-auto" />
+        </div>
+        <div class="col-3">
+            <p class="font-weight-bold">
+                @item.Title
+            </p>
+            <p>
+                @item.Description
+            </p>
+        </div>
+        <div class="col-1">
+            <p class="font-weight-bold">
+                @item.Price
+            </p>
+
+        </div>
+
+        <div class="col-3">
+            <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+            <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+            <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+        </div>
+
+
+    </div>
+}
+
+
+
+
+
+
+
+@*<table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Code)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CategoryId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ImageName)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Code)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryId)
+                </td>
+                <td>
+                     <img src="@("~/uploads/img/product/"+item.ImageName)" asp-append-version="true" width="50px" height="50px" />
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>*@

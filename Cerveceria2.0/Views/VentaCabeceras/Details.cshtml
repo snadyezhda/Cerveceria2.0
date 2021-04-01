@@ -1,0 +1,91 @@
+﻿@model Cerveceria2._0.Models.VentaCabecera
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <h4>VentaCabecera</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdUsuario)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdUsuario)
+        </dd>
+    </dl>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <td>
+
+                @Html.DisplayNameFor(model => model.Details.FirstOrDefault().ProductId)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Details.FirstOrDefault().Quantity)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.Details.FirstOrDefault().Price)
+            </td>
+            <td>
+                Total
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var itemModel in Model.Details)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(item => itemModel.GetProduct().Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(item => itemModel.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(item => itemModel.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(item => itemModel.GetTotal)
+                </td>
+            </tr>
+
+
+        }
+        <tr>
+
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+                Total
+            </td>
+            <td>
+                $ @ViewBag.TotalVentas
+            </td>
+        </tr>
+
+    </tbody>
+
+
+</table>
+@*<div class="col-12">
+        <p class=" align-self-center"></p>
+    </div>*@
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+    <a asp-action="Index">Volver a la lista</a>
+</div>

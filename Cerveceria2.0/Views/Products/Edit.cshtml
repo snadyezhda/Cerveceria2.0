@@ -1,0 +1,89 @@
+﻿@model Cerveceria2._0.Models.Product
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar</h1>
+
+<h4>Producto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Code" class="control-label"></label>
+                <input asp-for="Code" class="form-control" />
+                <span asp-validation-for="Code" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label"></label>
+                <input asp-for="CategoryId" class="form-control" />
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageName" class="control-label"></label>
+                <input asp-for="ImageName" value="@Model.ImageName" type="file" id="i_file" class="form-control" />
+                <span asp-validation-for="ImageName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <img id="ImageView" src="@("~/uploads/img/product/"+Model.ImageName)" asp-append-version="true" width="250px" height="250px" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+
+
+    <script>
+        $('#i_file').change(function (event) {
+            var tmppath = URL.createObjectURL(event.target.files[0]);
+            $("#ImageView").fadeIn("fast").attr('src', URL.createObjectURL(event.target.files[0]));
+            $("#disp_tmp_path").html("Temporary Path(Copy it and try pasting it in browser address bar) --> <strong>[" + tmppath + "]</strong>");
+        });
+        //var FileImage = document.getElementById("file");
+        //var img = document.getElementById("ImageView");
+        //FileImage.onchange=function () {
+        //    console.log(FileImage);
+        //    $.ajax({
+        //        url:"/Products/UploadImage",
+        //        type:"post",
+        //        success: function (imageName) {
+        //            var path = "~/uploads/img/product/";
+        //            img.src = path + imageName;
+        //        },
+        //        error: function (error) {
+        //            console.log(error);
+        //        }
+        //    });
+        //};
+    </script>
+}

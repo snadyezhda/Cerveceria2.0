@@ -1,0 +1,94 @@
+﻿@model Cerveceria2._0.Models.VentaCabecera
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Comprar</h1>
+
+<hr />
+<div class="form-group col-md-6">
+    <label>Filtrar por categoria</label>
+    <select asp-for="idCategoryFilter" asp-items="ViewBag.CategoryList" class="form-control" id="CategoryIdCmb"></select>
+</div>
+<hr />
+
+<div class="form-group col-md-6">
+    <label>Filtrar por producto</label>
+    <input asp-for="FilterProductStr" class="form-control" id="FilterStr" />
+    <input type="button" onclick="redirection()" value="Buscar" class="nav-link page-scroll" />
+</div>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            @foreach (var item in Model.Products)
+            {
+                <div class="row">
+                    <div class="col-3">
+
+                        <img src="@("~/uploads/img/product/" + item.ImageName)" asp-append-version="true" class="w-auto h-auto" />
+                    </div>
+                    <div class="col-2">
+                        <p class="font-weight-bold">
+                            @item.Title
+                        </p>
+                        <p>
+                            @item.Description
+                        </p>
+                        <p>
+                            @item.GetCategory().Description
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <p class="font-weight-bold">
+                            Cantidad Comprada: <span Id="QuantitySpan_@item.Id">0 </span>
+                        </p>
+                    </div>
+                    <div class="col-2">
+                        <p class="font-weight-bold" id="TotalPrice_@item.Id">
+                            @item.Price
+                        </p>
+                    </div>
+                    <div class="col-3">
+                        <button type="button" onclick="addProduct(@item.Id)">+ Agregar al Carrito</button>
+                    </div>
+
+                </div>
+            }
+
+            <div class="form-group">
+                <div class="text-center">
+                    <label class="form-control">Total <span id="Total" class=" font-weight-bold"> 0 </span> </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Finalizar Compra" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a la lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/js/Ventas/Ventas.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            @foreach(var item in Model.Products)
+            {
+                  <text> AfterRefreshPage(@item.Id);</text>
+            }
+            GetTotal();
+        });
+    </script>
+
+}
+
